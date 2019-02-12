@@ -1,0 +1,72 @@
+
+.groupbox-container
+{
+	/*padding: .5em;*/
+	padding: 0;
+	margin: .6em .3em .3em;
+	border: 1px solid #666;
+	/*position: relative;*/
+}
+
+.groupbox-container > .groupbox-header
+{
+	position: absolute;
+	padding: 1px 4px;
+	border: 1px solid #666;
+	/*top: -.6em;*/
+	/*transform: translate(-.4em, -1.1em);*/
+	transform: translate(.4em, -.6em);
+	font-family: Verdana, sans-serif;
+	/* font-size: .85em; */
+	font-size: .95em;
+	font-variant: small-caps;
+	background: white;
+	min-width: 1em;
+	min-height: 1em;
+	cursor: default;
+}
+
+.groupbox-container > .groupbox-content
+{
+	margin: .5em;
+	overflow: hidden;
+}
+
+.groupbox-container[data-groupbox-mode="vertical"][data-groupbox-state="folded"]
+{
+	background: silver;
+	width: .8em;
+	max-width: .8em;
+	padding: 0;
+}
+
+.groupbox-container[data-groupbox-mode="vertical"][data-groupbox-state="folded"] > .groupbox-header
+{
+	/*writing-mode: sideways-lr;*/
+	/*writing-mode: vertical-lr;*/
+	/*transform: translate(-50%, 0%) rotate(-0.25turn) translate(-50%, 0%);*/
+	/*transform: translate(-50%, 0%) rotate(-0.25turn) translate(calc(-50% + .6em), 0%);*/
+	transform: translate(-50%, 0%) rotate(-0.25turn) translate(calc(-50% + 1.1em), .5em);
+}
+
+.groupbox-container[data-groupbox-mode="vertical"][data-groupbox-state="folded"] > .groupbox-content
+{
+	/*display: none;*/
+	margin-left: 3em;
+	width: 0;
+	overflow: hidden;
+}
+
+.groupbox-container[data-groupbox-mode="horizontal"][data-groupbox-state="folded"]
+{
+	background: silver;
+	max-height: .8em;
+	padding: 0;
+}
+
+.groupbox-container[data-groupbox-mode="horizontal"][data-groupbox-state="folded"] > .groupbox-content
+{
+	margin-top: 3em;
+	height: 0;
+	overflow: hidden;
+}
